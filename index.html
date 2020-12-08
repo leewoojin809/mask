@@ -53,7 +53,7 @@
         const prediction = await model.predict(webcam.canvas);
         if( prediction[0].className == "마스크 미착용" && prediction[0].probability.toFixed(2)  >= 0.90){
             labelContainer.childNodes[0].innerHTML = "Unable to use when not wearing a mask."
-            var audio = new Audio('http://blogattach.naver.net/96038a3b281d1ca98463043108e691ee4f1fe140/20201205_170_blogfile/dlfnwls123_1607150124397_22grTu_MP3/%EC%82%90%EB%B9%84+%EC%95%8C%EB%9E%8C%EC%86%8C%EB%A6%AC.MP3');
+            var audio = new Audio('http://blogattach.naver.net/49dc55e5f1a9ad715dbbddefd4364b3097c33bd8ed/20201208_60_blogfile/dlfnwls123_1607424317987_SFwN2F_MP3/%EC%82%90%EB%B9%84%EC%95%8C%EB%9E%8C%EC%86%8C%EB%A6%AC.MP3');
                 audio.play();
         } else if( prediction[1].className == "마스크 착용" && prediction[1].probability.toFixed(2)  >= 0.90){
             labelContainer.childNodes[0].innerHTML = "You're wearing a good mask. Please keep wearing it while you're using it."
